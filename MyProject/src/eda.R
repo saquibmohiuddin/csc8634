@@ -1,8 +1,9 @@
 library('ProjectTemplate')
 load.project()
 
-for (dataset in project.info$data)
-{
-  message(paste('Showing top 5 rows of', dataset))
-  print(head(get(dataset)))
-}
+g1 = ggplot(data = gpu, mapping = aes(x = powerDrawWatt, y = gpuTempC)) + geom_point()
+
+g2 = ggplot(data = gpu, mapping = aes(x = gpuMemUtilPerc, y = gpuUtilPerc)) + geom_point()
+
+g3 = ggplot(data = gpu, mapping = aes(x = gpuUtilPerc, y = gpuMemUtilPerc)) + geom_point()
+
