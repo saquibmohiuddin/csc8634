@@ -1,0 +1,58 @@
+---
+title: "CSC8634Project"
+author: 'Saquib Mohiuddin Siddiqui, Student ID : 200636689'
+date: "1/24/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir= normalizePath('..'))
+```
+
+```{r include=FALSE}
+# Load project
+library("ProjectTemplate")
+library(ggplot2)
+load.project()
+
+# Run code in analysis.R script
+source("src/eda.R")
+```
+
+
+```{r}
+head(gpu)
+```
+
+```{r}
+summary(gpu)
+```
+
+
+```{r}
+cor(gpu$gpuUtilPerc, gpu$gpuMemUtilPerc)
+```
+
+```{r}
+cor(gpu$powerDrawWatt, gpu$gpuTempC)
+```
+
+
+```{r}
+head(application.checkpoints)
+```
+
+```{r}
+table(application.checkpoints$eventName)
+```
+
+
+```{r}
+table(task.x.y$level)
+```
+
+
+```{r}
+```
+
