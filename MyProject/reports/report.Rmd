@@ -64,4 +64,7 @@ Drop column and obtain correlation matrix
 pairs(df_corr)
 ```
 
+```{r}
+str(gpu)
+```
 
