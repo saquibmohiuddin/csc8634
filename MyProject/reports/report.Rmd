@@ -51,8 +51,17 @@ table(application.checkpoints$eventName)
 ```{r}
 table(task.x.y$level)
 ```
+The visualization created is a zoomable "google maps style" map. In total we create 12 levels. Level 1 is zoomed right out and level 12 is zoomed right in. You will only see levels 4, 8 and 12 in the data as the intermediate level are derived in the tiling process.
 
 
 ```{r}
+cor(df_corr)
 ```
+
+Drop column and obtain correlation matrix 
+
+```{r}
+pairs(df_corr)
+```
+
 
