@@ -44,6 +44,11 @@ head(application.checkpoints)
 ```
 
 ```{r}
+table(application.checkpoints$eventType)
+```
+
+
+```{r}
 table(application.checkpoints$eventName)
 ```
 
@@ -52,6 +57,15 @@ table(application.checkpoints$eventName)
 table(task.x.y$level)
 ```
 The visualization created is a zoomable "google maps style" map. In total we create 12 levels. Level 1 is zoomed right out and level 12 is zoomed right in. You will only see levels 4, 8 and 12 in the data as the intermediate level are derived in the tiling process.
+
+```{r}
+ym = table(task.x.y$level)
+```
+
+```{r}
+barplot(ym, main = "Iterations to render Levels in Image", 
+        xlab = "levels", ylab = "iterations", col = "darkred")
+```
 
 
 ```{r}
