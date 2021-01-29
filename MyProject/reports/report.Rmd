@@ -29,6 +29,26 @@ head(gpu)
 summary(gpu)
 ```
 
+```{r}
+df_gpu_scale = gpu[c(5,6,7,8)]
+```
+
+```{r}
+head(df_gpu_scale)
+```
+
+```{r}
+df_gpu_scale = scale(df_gpu_scale)
+```
+
+```{r}
+head(df_gpu_scale)
+```
+
+```{r}
+cor(df_gpu_scale)
+```
+
 
 ```{r}
 cor(gpu$gpuUtilPerc, gpu$gpuMemUtilPerc)
