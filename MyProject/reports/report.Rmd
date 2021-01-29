@@ -20,14 +20,15 @@ load.project()
 source("src/eda.R")
 ```
 
-
+Viewing GPU Data set 
 ```{r}
 head(gpu)
 ```
-
+Summarizing GPU dataset 
 ```{r}
 summary(gpu)
 ```
+
 
 ```{r}
 df_gpu_scale = gpu[c(5,6,7,8)]
@@ -36,6 +37,10 @@ df_gpu_scale = gpu[c(5,6,7,8)]
 ```{r}
 head(df_gpu_scale)
 ```
+```{r}
+
+```
+
 
 ```{r}
 df_gpu_scale = scale(df_gpu_scale)
@@ -82,6 +87,7 @@ The visualization created is a zoomable "google maps style" map. In total we cre
 ym = table(task.x.y$level)
 ```
 
+
 ```{r}
 barplot(ym, main = "Iterations to render Levels in Image", 
         xlab = "levels", ylab = "iterations", col = "darkred")
@@ -94,9 +100,11 @@ cor(df_corr)
 
 Drop column and obtain correlation matrix 
 
+
 ```{r}
-pairs(df_corr)
+pairs(df_gpu_scale)
 ```
+
 
 ```{r}
 str(gpu)
